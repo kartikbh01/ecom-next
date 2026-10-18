@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex min-h-screen flex-col border border-dashed">
+      <body className="flex min-h-screen flex-col border">
         {/* Navbar component uses usePathName() which is a client-side navigation hook.  */}
         <Suspense fallback={<></>}>
           <Navbar />

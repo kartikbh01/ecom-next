@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Label from "./label";
 import { usePathname } from "next/navigation";
+import ComponentLabel from "./label";
 
 const links = [
   { name: "Home", href: "/" },
@@ -24,13 +25,13 @@ export default function Navbar() {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <nav className="border-b border-dashed">
+    <nav className="border-b ">
       <ul className="flex items-center px-8 py-4 gap-4">
         {links.map((link) => (
           <li
             key={link.href}
             className={
-              isLinkActive(link.href, pathname)
+              isLinkActive(pathname, link.href)
                 ? "text-blue-500 font-bold border-b"
                 : ""
             }
@@ -38,7 +39,7 @@ export default function Navbar() {
             <Link href={link.href}>{link.name}</Link>
           </li>
         ))}
-        <Label text={" /layout.js (root layout)"} />
+        <ComponentLabel text={" /layout.js (root layout)"} />
       </ul>
     </nav>
   );
