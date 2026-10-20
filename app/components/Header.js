@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Label from "./label";
 import { usePathname } from "next/navigation";
 import ComponentLabel from "./label";
 
@@ -23,7 +22,7 @@ function isLinkActive(pathname, href) {
 
 export default function Navbar() {
   const pathname = usePathname();
-  console.log(pathname);
+  // console.log(pathname);
   return (
     <nav className="border-b ">
       <ul className="flex items-center px-8 py-4 gap-4">

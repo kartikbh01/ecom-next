@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Label from "./components/label";
 import ComponentLabel from "./components/label";
 
 export default function NotFound() {
