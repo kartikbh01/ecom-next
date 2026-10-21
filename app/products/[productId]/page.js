@@ -2,6 +2,13 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import ComponentLabel from "../../components/label";
 
+export const generateMetadata = async ({ params }) => {
+  const id = (await params).productId
+  return {
+    title: "product-" + id
+  } // you can also fetch the product name  the id and set it as title
+}
+
 export default async function Product({ params }) {
   const { productId } = await params;
 

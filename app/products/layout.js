@@ -1,4 +1,8 @@
 import ComponentLabel from "../components/label";
+export const metadata = {
+  title: "products",
+  description: "Yes, It's all about products"
+}
 
 export default function Layout({ children }) {
   return (
