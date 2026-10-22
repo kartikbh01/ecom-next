@@ -13,6 +13,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // throw new Error("random error")
+  // if you throw this error here (from layout), the error.js cannot handle it because the layout sits above the error boundary in nextjs rendering hierarchy
+  // this will be handled by global-error.js
+
   return (
     <html lang="en">
       <body className="flex min-h-screen flex-col border">
